@@ -3,6 +3,7 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
 class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         
@@ -24,13 +25,7 @@ class Solution:
                 pre.next = curr.next
                 curr = curr.next
             else :
-                if not newHead :
-                    newHead = curr
-                
-                if not pre :
-                    pre = newHead
-                else :
-                    pre = pre.next
+                pre = pre.next
                 curr = curr.next
                 
 
