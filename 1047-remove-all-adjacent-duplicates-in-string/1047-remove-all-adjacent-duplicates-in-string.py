@@ -3,6 +3,7 @@ class Solution:
         
         duplicateList = []
         for char in s :
+            
             if not duplicateList :
                 duplicateList.append(char)
             else :
@@ -13,3 +14,4 @@ class Solution:
             
         return ''.join(duplicateList)
             
+        
