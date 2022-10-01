@@ -1,18 +1,35 @@
 class Solution:
     def removeOuterParentheses(self, s: str) -> str:
         
-        parenthessList = []
+#         parenthessList = []
+#         result = ""
+        
+#         for par in s :
+             
+#             if par == "(" :
+#                 if parenthessList :
+#                     result += par
+#                 parenthessList.append(par)
+#             else :
+#                 parenthessList.pop()
+#                 if parenthessList :
+#                     result += par
+                
+
+#         return result
+
+        count = 0
         result = ""
         
         for par in s :
-            
+             
             if par == "(" :
-                if parenthessList :
+                if not count == 0 :
                     result += par
-                parenthessList.append(par)
+                count += 1
             else :
-                parenthessList.pop()
-                if parenthessList :
+                count -= 1
+                if not count == 0 :
                     result += par
                 
 
